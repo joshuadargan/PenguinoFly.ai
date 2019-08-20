@@ -1,24 +1,20 @@
 import pygame
-from src.Icicle import Ice
-from pygame import Color
-from pygame import locals
-from pygame import display
-from src.State import State
+from src.Color import Color
 
 
 # Holds the settings for the window
 class Window:
-    height = 0
-    width = 0
+    height = 700
+    width = 1500
 
     def __init__(self):
         self.keep_open = True
-        self.screen = pygame.display.set_mode((1500,700))
+        self.screen = pygame.display.set_mode((Window.width, Window.height))
         Window.width, Window.height = self.screen.get_size()
         print("INFO: screen width - " + str(Window.width) + "  height - " + str(Window.height))
 
     def fill_base(self):
-        self.screen.fill(State.light_blue)
+        self.screen.fill(Color.light_blue)
 
     def draw(self, entity):
         self.screen.blit(entity.image, entity.get_location())

@@ -30,10 +30,10 @@ class Penguin(ImageEntity):
         entity_width = entity.get_width()
         entity_height = entity.get_width()
 
-        entity_collision_range_x = (entity_x - (entity_width / 2), entity_x + (entity_width / 2))
+        entity_collision_range_x = (entity_x - entity_width, entity_x + (entity_width))
         x_collision = (entity_collision_range_x[0] < self.x < entity_collision_range_x[1])
 
-        entity_collision_range_y = (entity_y - (entity_height / 2), entity_y + (entity_height / 2))
+        entity_collision_range_y = (entity_y - entity_height, entity_y + (entity_height / 2))
         y_collision = (entity_collision_range_y[0] < self.y < entity_collision_range_y[1])
 
         return x_collision and y_collision
