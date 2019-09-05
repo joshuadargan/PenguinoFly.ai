@@ -24,6 +24,8 @@ if __name__ == '__main__':
                 if current_state.state == State.GAME_STATE or current_state.state == State.RESTART_STATE:
                     # Create new game
                     current_state = Game(window)
+                elif current_state.state == State.AI_GAME_STATE or current_state.state == State.AI_RESTART_STATE:
+                    current_state = Game(window, State.AI_GAME_STATE)
                 elif current_state.state == State.MENU_STATE:
                     current_state = Menu(window)
 

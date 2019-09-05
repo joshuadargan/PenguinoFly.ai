@@ -9,6 +9,8 @@ class State:
     GAME_STATE = "Game"
     PAUSE_STATE = "Pause"
     RESTART_STATE = "Restart"
+    AI_GAME_STATE = "AI_Game"
+    AI_RESTART_STATE = "AI_Restart"
 
     def __init__(self, state_name, window):
         self.state = state_name

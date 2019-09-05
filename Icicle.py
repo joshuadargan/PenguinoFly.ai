@@ -67,7 +67,7 @@ class Icicle(Entity):
                 top = height
                 height += Icicle.gap_size
                 bottom = height
-                self.gap_range = (top,bottom)
+                self.gap_range = (top, bottom)
 
                 self.ice_blocks.append(Ice(Ice.image_top, screen_width, height, Ice.icicle_type))
             else:

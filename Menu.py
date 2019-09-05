@@ -36,4 +36,5 @@ class Menu(State):
             pass
         elif State.is_key_pressed(pygame.K_a):
             # Start ai
+            self.state = State.AI_GAME_STATE
             pass
