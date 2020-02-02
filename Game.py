@@ -5,8 +5,8 @@ from src.State import State
 from src.Icicle import IceBoundary, Icicle, Ice
 from src.Penguin import Penguin
 from src.Window import Window
-from src.NeuralNetwork import Brain
-from src.NeuralNetwork import BrainControl
+#from src.NeuralNetwork import Brain
+#from src.NeuralNetwork import BrainControl
 
 class Game:
     spacing = 150
@@ -160,12 +160,12 @@ class Game:
                                       self.closest_gap_range[1]]
             if self.old_state is None:
                 self.old_state = self.environment_state
-            if BrainControl.master_brain.get_next_action(self.environment_state):
-                self.penguin.flapped()
-            BrainControl.master_brain.update(self.old_state, \
-                                             self.environment_state, \
-                                             0, \
-                                             self.reward)
+            # if BrainControl.master_brain.get_next_action(self.environment_state):
+            #     self.penguin.flapped()
+            # BrainControl.master_brain.update(self.old_state, \
+            #                                  self.environment_state, \
+            #                                  0, \
+            #                                  self.reward)
 
     #
     def keys_pressed_reaction(self):

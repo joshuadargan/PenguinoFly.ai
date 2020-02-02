@@ -38,6 +38,7 @@ class Entity:
     def get_height(self):
         return 0
 
+
 class ImageEntity(Entity):
     assets_folder = "Assets/"
 
